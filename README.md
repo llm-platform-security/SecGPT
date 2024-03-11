@@ -25,7 +25,7 @@ We develop SecGPT using [LangChain](https://github.com/langchain-ai/langchain), 
 ## Installation
 To set up the environment, we suggest using Conda to install all necessary packages. Conda installation instructions can be found [here](https://docs.anaconda.com/free/miniconda/miniconda-install/). The following setup assumes Conda is installed and is running on a Linux/macOS system (though Windows should work too).
 
-First, create the conda environment, 
+First, create the conda environment: 
 
 ```sh
 conda create -n secgpt python=3.9
