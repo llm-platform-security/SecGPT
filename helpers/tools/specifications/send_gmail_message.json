@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "send_gmail_message": {
+    "type": "object",
+    "properties": {
+      "request": {
+      "type": "object",
+      "properties": {
+        "message": {
+        "type": "string",
+        "description": "The body of the email message."
+        },
+        "to": {
+        "oneOf": [
+          {
+          "type": "string",
+          "format": "email",
+          "description": "A single recipient email address."
+          },
+          {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "email"
+          },
+          "description": "List of recipient email addresses."
+          }
+        ],
+        "description": "Recipient email address(es)."
+        },
+        "subject": {
+        "type": "string",
+        "description": "The subject of the email."
+        },
+        "cc": {
+        "oneOf": [
+          {
+          "type": "string",
+          "format": "email",
+          "description": "A single CC email address."
+          },
+          {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "format": "email"
+          },
+          "description": "List of CC email addresses, optional."
+          }
+        ],
+        "description": "CC email address(es), optional."
+        },
+        "bcc": {
+        "oneOf": [
+          {
+          "type": "string",
+          "format": "email",
+          "description": "A single BCC email address."
+          },
+          {
+          "type": ["array", "null"],
+          "items": {
+            "type": "string",
+            "format": "email"
+          },
+          "description": "List of BCC email addresses, optional."
+          }
+        ],
+        "description": "BCC email address(es), optional."
+        }
+      },
+      "required": ["message", "to", "subject"]
+      },
+      "response": {
+      "type": "string",
+      "description": "Confirmation message with the ID of the sent message."
+    }
+    },
+    "required": ["request", "response"]
+    }
+  },
+  "required": ["send_gmail_message"]
+}
+

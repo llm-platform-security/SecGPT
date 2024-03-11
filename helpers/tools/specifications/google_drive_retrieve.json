@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "google_drive_retrieve": {
+      "type": "object",
+      "properties": {
+        "request": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "minLength": 1,
+              "description": "String to find relevant documents for"
+            }
+          },
+          "required": ["query"]
+        },
+        "response": {
+          "type": "string",
+          "description": "Relevant documents"
+        }
+      },
+      "required": ["request", "response"]
+    }
+  },
+  "required": ["google_drive_retrieve"]
+}

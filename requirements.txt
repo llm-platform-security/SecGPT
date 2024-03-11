@@ -1,0 +1,10 @@
+jsonschema==4.21.1
+langchain==0.1.10
+langchain_community==0.0.25
+langchain_core==0.1.28
+langchain_googledrive==0.1.14
+langchain_openai==0.0.8
+pyseccomp==0.1.2
+redis==5.0.1
+tldextract==5.1.1
+faiss-cpu==1.7.4

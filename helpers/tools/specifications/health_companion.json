@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+      "health_companion": {
+          "type": "object",
+          "properties": {
+              "request": {
+                  "type": "object",
+                  "properties": {
+                      "name": {
+                          "type": "string",
+                          "description": "The name of the patient."
+                      },
+                      "dob": {
+                          "type": "string",
+                          "description": "The date of birth of the patient."
+                      },
+                      "city": {
+                          "type": "string",
+                          "description": "The city where the patient resides."
+                      },
+                      "email": {
+                          "type": "string",
+                          "format": "email",
+                          "description": "The email address of the patient."
+                      },
+                      "preferred_date": {
+                          "type": "string",
+                          "description": "The preferred date for the appointment."
+                      },
+                      "medical_issues": {
+                          "type": "string",
+                          "description": "Description of the patient's medical issues."
+                      },
+                      "preferred_doctor": {
+                          "type": "string",
+                          "description": "The preferred doctor for the appointment, if any."
+                      }
+                  },
+                  "required": ["name", "dob", "city", "email", "preferred_date", "medical_issues"]
+              },
+              "response": {
+                  "type": "object",
+                  "properties": {
+                      "Patient Name": {
+                          "type": "string"
+                      },
+                      "Date of Birth": {
+                          "type": "string"
+                      },
+                      "City": {
+                          "type": "string"
+                      },
+                      "Email Address": {
+                          "type": "string"
+                      },
+                      "Appointment Date and Time": {
+                          "type": "string",
+                          "description": "The scheduled date and time for the appointment."
+                      },
+                      "Medical Issues": {
+                          "type": "string"
+                      },
+                      "Preferred Doctor": {
+                          "type": "string",
+                          "description": "The preferred doctor for the appointment or 'Any available' if none specified."
+                      }
+                  },
+                  "required": ["Patient Name", "Date of Birth", "City", "Email Address", "Appointment Date and Time", "Medical Issues", "Preferred Doctor"]
+              }
+          },
+          "required": ["request", "response"]
+      }
+  },
+  "required": ["health_companion"]
+}

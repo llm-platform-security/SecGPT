@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "quick_ride": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "object",
+            "properties": {
+              "start_point": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The starting location for the ride."
+              },
+              "end_point": {
+                "type": "string",
+                "minLength": 1,
+                "description": "The destination location for the ride."
+              }
+            },
+            "required": ["start_point", "end_point"]
+          },
+          "response": {
+            "type": "string",
+            "description": "The estimated fare for the journey."
+          }
+        },
+        "required": ["request", "response"]
+      }
+    },
+    "required": ["quick_ride"]
+  }
+  

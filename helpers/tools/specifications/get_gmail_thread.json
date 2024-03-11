@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "get_gmail_thread": {
+    "type": "object",
+    "properties": {
+      "request": {
+      "type": "object",
+      "properties": {
+        "thread_id": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The ID of the thread to retrieve."
+        }
+      },
+      "required": ["thread_id"]
+      },
+      "response": {
+      "type": "object",
+      "properties": {
+        "id": {
+        "type": "string",
+        "description": "The ID of the thread retrieved."
+        },
+        "messages": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the individual message in the thread."
+          },
+          "snippet": {
+            "type": "string",
+            "description": "A snippet preview of the message content."
+          }
+          },
+          "required": ["id", "snippet"],
+          "additionalProperties": false
+        },
+        "description": "List of message details within the thread."
+        }
+      },
+      "required": ["id", "messages"],
+      "description": "The detailed information of the thread retrieved."
+      }
+    },
+    "required": ["request", "response"]
+    }
+  },
+  "required": ["get_gmail_thread"]
+}
+  

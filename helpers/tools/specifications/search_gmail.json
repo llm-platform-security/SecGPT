@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "search_gmail": {
+    "type": "object",
+    "properties": {
+      "request": {
+      "type": "object",
+      "properties": {
+        "query": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The query string to search for within the messages."
+        },
+        "resource": {
+        "type": "string",
+        "enum": ["MESSAGES", "THREADS"],
+        "default": "MESSAGES",
+        "description": "The type of resource to query."
+        },
+        "max_results": {
+        "type": "integer",
+        "default": 10,
+        "description": "The maximum number of results to return."
+        },
+        "run_manager": {
+        "description": "Optional callback manager for tool run."
+        }
+      },
+      "required": ["query"]
+      },
+      "response": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "description": "A dictionary representing a single message or thread."
+      },
+      "description": "List of dictionaries each representing a message or thread."
+      }
+    },
+    "required": ["request", "response"]
+    }
+  },
+  "required": ["search_gmail"]
+}
+  

@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+      "travel_mate": {
+          "type": "object",
+          "properties": {
+              "request": {
+                  "type": "object",
+                  "properties": {
+                      "name": {
+                          "type": "string",
+                          "description": "The name of the passenger."
+                      },
+                      "email": {
+                          "type": "string",
+                          "format": "email",
+                          "description": "The email address of the passenger."
+                      },
+                      "departure_city": {
+                          "type": "string",
+                          "description": "The city from which the passenger will depart."
+                      },
+                      "destination_city": {
+                          "type": "string",
+                          "description": "The destination city."
+                      },
+                      "departure_date": {
+                          "type": "string",
+                          "description": "The departure date."
+                      },
+                      "class_of_service": {
+                          "type": "string",
+                          "description": "The class of service for the travel."
+                      },
+                      "special_requirements": {
+                          "type": "string",
+                          "description": "Any special requirements for the travel."
+                      }
+                  },
+                  "required": ["name", "email", "departure_city", "destination_city", "departure_date", "class_of_service", "special_requirements"]
+              },
+              "response": {
+                  "type": "object",
+                  "properties": {
+                      "Passenger Name": {
+                          "type": "string"
+                      },
+                      "Email Address": {
+                          "type": "string"
+                      },
+                      "Departure City": {
+                          "type": "string"
+                      },
+                      "Destination City": {
+                          "type": "string"
+                      },
+                      "Departure Date and Time": {
+                          "type": "string",
+                          "description": "The departure date and time, including the appointment time."
+                      },
+                      "Class of Service": {
+                          "type": "string"
+                      },
+                      "Special Requirements": {
+                          "type": "string"
+                      },
+                      "Booking Reference": {
+                          "type": "string",
+                          "description": "A unique booking reference code."
+                      }
+                  },
+                  "required": ["Passenger Name", "Email Address", "Departure City", "Destination City", "Departure Date and Time", "Class of Service", "Special Requirements", "Booking Reference"]
+              }
+          },
+          "required": ["request", "response"]
+      }
+  },
+  "required": ["travel_mate"]
+}

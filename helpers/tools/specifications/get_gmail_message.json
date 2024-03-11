@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "get_gmail_message": {
+    "type": "object",
+    "properties": {
+      "request": {
+      "type": "object",
+      "properties": {
+        "message_id": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The ID of the message to retrieve."
+        }
+      },
+      "required": ["message_id"]
+      },
+      "response": {
+      "type": "object",
+      "properties": {
+        "id": {
+        "type": "string",
+        "description": "The ID of the message retrieved."
+        },
+        "threadId": {
+        "type": "string",
+        "description": "The thread ID of the message."
+        },
+        "snippet": {
+        "type": "string",
+        "description": "A snippet preview of the message content."
+        },
+        "body": {
+        "type": "string",
+        "description": "The cleaned body of the message."
+        },
+        "subject": {
+        "type": "string",
+        "description": "The subject of the message."
+        },
+        "sender": {
+        "type": "string",
+        "description": "The sender of the message."
+        }
+      },
+      "required": ["id", "threadId", "snippet", "body", "subject", "sender"],
+      "description": "The detailed information of the message retrieved."
+      }
+    },
+    "required": ["request", "response"]
+    }
+  },
+  "required": ["get_gmail_message"]
+}
+  

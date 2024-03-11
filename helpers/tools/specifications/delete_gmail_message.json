@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "delete_gmail_message": {
+        "type": "object",
+        "properties": {
+          "request": {
+            "type": "object",
+            "properties": {
+              "message_id": {
+                "type": "string",
+                "description": "The ID of email message to be deleted."
+              }
+            },
+            "required": ["message_id"]
+          },
+          "response": {
+            "type": "string",
+            "description": "A message to indicate whether the message is successfully deleted."
+          }
+        },
+        "required": ["request", "response"]
+      }
+    },
+    "required": ["delete_gmail_message"]
+  }
+  

@@ -1,0 +1,51 @@
+{
+    "available_functionalities": [
+        "google_drive_retrieve",
+        "send_gmail_message",
+        "search_gmail",
+        "get_gmail_message",
+        "get_gmail_thread", 
+        "delete_gmail_message",
+        "quick_ride",
+        "metro_hail",
+        "travel_mate",
+        "health_companion",
+        "requests_get",
+        "requests_post",
+        "requests_patch",
+        "requests_put",
+        "requests_delete"
+    ],
+    "installed_functionalities": [
+        "google_drive_retrieve",
+        "send_gmail_message",
+        "search_gmail",
+        "delete_gmail_message"
+    ],
+    "available_toolkits": {
+        "gmail": [
+            "send_gmail_message",
+            "search_gmail",
+            "get_gmail_message",
+            "get_gmail_thread"
+        ],
+        "requests_all": [
+            "requests_get",
+            "requests_post",
+            "requests_patch",
+            "requests_put",
+            "requests_delete"
+        ]
+    },
+    "installed_toolkits": {
+        "gmail": [
+            "send_gmail_message",
+            "search_gmail"
+        ]
+    },
+    "available_annotations": [
+        "creative_muse",
+        "symptom_solver"
+    ],
+    "enabled_annotations": []
+}
