@@ -145,6 +145,15 @@ We welcome contributions to the project, e.g., through pull requests. For issues
 │   ├── env_variables.json
 │   ├── functionalities.json
 │   └── perm.json
+├── evaluation
+│   ├── ambiguity
+│   │   ├── inadvertent_data_exposure.json
+│   │   └── uncontrolled_system_alteration.json
+│   └── attacker
+│       ├── app_compromise.json
+│       └── data_stealing.json
+├── figure
+│   └── architecture.bmp
 ├── helpers
 │   ├── configs
 │   │   └── configuration.py
@@ -189,13 +198,11 @@ We welcome contributions to the project, e.g., through pull requests. For issues
 │   └── spoke_operator.py
 ├── vanillagpt
 │   └── vanillagpt.py
-├── evaluation
-│   ├── ambiguity
-│   │   ├── uncontrolled_system_alteration.json
-│   │   └── inadvertent_data_exposure.json
-│   └── attacker
-│       ├── app_compromise.json
-│       └── data_stealing.json
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── secgpt_case_studies.py
 ├── secgpt_main.py
+├── vanillagpt_case_studies.py
 └── vanillagpt_main.py
 ```
