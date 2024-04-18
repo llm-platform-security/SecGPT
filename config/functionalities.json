@@ -1,0 +1,10 @@
+{
+    "available_functionalities": [
+        "quick_ride",
+        "metro_hail"
+    ],
+    "installed_functionalities": [
+        "quick_ride",
+        "metro_hail"
+    ]
+}
