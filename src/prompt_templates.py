@@ -23,7 +23,7 @@ class MyTemplates:
                     "input": {
                         "query": str
                     },
-                    "ouput": "result_1"
+                    "output": "result_1"
                 },
                 {
                     "name": "Tool name 2",
