@@ -1,5 +1,5 @@
 from helpers.tools.tool_importer import ToolImporter
-from helpers.memories.memory import Memory
+from helpers.memory.memory import Memory
 
 from langchain.agents import AgentExecutor
 from langchain_openai import ChatOpenAI

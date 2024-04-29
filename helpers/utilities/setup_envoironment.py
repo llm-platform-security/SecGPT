@@ -8,7 +8,8 @@ def setup_environment():
     with open(Configs.env_variables_path, "r") as f:
         env_variables = json.load(f)
         for key, value in env_variables.items():
-            os.environ[key] = value
+            if key not in os.environ:
+                os.environ[key] = value
     # Set google account file
     os.environ["GOOGLE_ACCOUNT_FILE"] = Configs.credentials_path
     # Clear session permissions

@@ -47,7 +47,6 @@ class SpokeParser(AgentOutputParser):
                         
                         if message_type != "function_probe_response" or request_schema is None or response_schema is None:
                             message = f"Could not probe {request_functionality} functionality. YOU MUST NOT PROBE {request_functionality} AGAIN!"
-                            # return AgentFinish({"output": message}, text)
                             return AgentAction("message_spoke", message, text)
                         
                         self.called_functionalities[request_functionality] = {}
@@ -63,7 +62,6 @@ class SpokeParser(AgentOutputParser):
                         message_type, response = self.spoke_operator.make_request(request_functionality, action_dict)
                         if message_type != "app_response":
                             message = f"Could not make request to {request_functionality}. YOU MUST NOT REQUEST {request_functionality} AGAIN!"
-                            # return AgentFinish({"output": message}, text)
                             return AgentAction("message_spoke", message, text)
                         
                         is_response_formatted = self.spoke_operator.check_format(response_schema, response)
@@ -75,7 +73,8 @@ class SpokeParser(AgentOutputParser):
                             message = request_functionality+"s' response is not well formatted"
                             return AgentAction("message_spoke", message, text)                        
                     else:
-                        message  = "Create an functionality request based on this specification (Note: Include necessary properties): "+str(request_schema["properties"])
+                        message = f'Use the tool "{request_functionality}" with the formatted input strictly following the tool parameter dictionary: "{str(request_schema)}"'
+                        # f'Create an "Action" for "{request_functionality}" with "action_input" based on this specification (Note: Include necessary properties): "{str(request_schema["properties"])}"'
                         return AgentAction("message_spoke", message, text)
                     
                 else:

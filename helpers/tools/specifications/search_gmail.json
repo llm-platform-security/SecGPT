@@ -31,13 +31,10 @@
       "required": ["query"]
       },
       "response": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": true,
-        "description": "A dictionary representing a single message or thread."
-      },
-      "description": "List of dictionaries each representing a message or thread."
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256,
+        "description": "A string representing a single message or thread."
       }
     },
     "required": ["request", "response"]

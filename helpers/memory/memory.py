@@ -1,5 +1,4 @@
 # Libraries for memory
-from typing import Any
 from langchain.memory import (
     ConversationBufferMemory, 
     ConversationSummaryBufferMemory,
@@ -33,7 +32,7 @@ class Memory:
         # Set up entity memory
         entity_memory = ConversationEntityMemory(llm=llm, chat_memory=self.entity_history, chat_history_key="entity_history", input_key="input", output_key='output')
 
-        # Combine all memories  
+        # Combine memory 
         self.memory = CombinedMemory(memories=[conv_memory, summary_memory, entity_memory]) 
     
     def get_memory(self):
@@ -77,6 +76,3 @@ class Memory:
         inputs_dict = {"input": inputs}  
         outputs_dict = {"output": outputs} #{"text": outputs}
         self.memory.save_context(inputs_dict, outputs_dict)
-
-
-        

@@ -45,15 +45,10 @@
       "required": ["message", "to", "subject"]
       },
       "response": {
-      "type": "object",
-      "properties": {
-        "draft_id": {
         "type": "string",
-        "description": "The ID of the created email draft."
-        }
-      },
-      "required": ["draft_id"],
-      "description": "The output returned after creating an email draft."
+        "minLength": 1,
+        "maxLength": 256,
+        "description": "A message to indicate whether an email draft is successfully created."
       }
     },
     "required": ["request", "response"]

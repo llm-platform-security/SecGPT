@@ -23,6 +23,8 @@
           },
           "response": {
             "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
             "description": "The estimated fare for the journey."
           }
         },

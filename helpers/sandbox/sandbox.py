@@ -6,8 +6,8 @@ import platform
 # Set timeout for spoke execution
 TIMEOUT = 180
 
-# Set the memory, cpu and write limits
-# These are app-specific and can be be adjusted as needed
+# Set the memory, CPU and write limits
+# These are app-specific and can be adjusted as needed
 MEMORY_LIMIT = resource.getrlimit(resource.RLIMIT_AS)[1] #10240 * 1024 * 1024  
 CPU_TIME_LIMIT = resource.getrlimit(resource.RLIMIT_CPU)[1] #2 * 60  
 WRITE_LIMIT = resource.getrlimit(resource.RLIMIT_FSIZE)[1] #10240 * 1024 * 1024  
@@ -51,7 +51,7 @@ if platform.system() == "Linux":
         filter.load()
 
         # # Create a SyscallFilter instance with EPERM: operation not permitted so users can tell
-        # # they're being blocked from doing something
+        # # They're being blocked from doing something
         # filter = seccomp.SyscallFilter(seccomp.ERRNO(seccomp.errno.EPERM))
 
         # # Allow basic system calls needed for most programs to run
@@ -69,7 +69,7 @@ if platform.system() == "Linux":
         # for syscall in ["fstat", "lseek", "mmap", "mprotect", "munmap", "brk", "clone", "futex"]:
         #     filter.add_rule(seccomp.ALLOW, syscall)
 
-        # # load the filter in the kernel
+        # # Load the filter in the kernel
         # filter.load()
 
 else:

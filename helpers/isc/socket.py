@@ -27,7 +27,7 @@ class Socket:
                     return data  # Return the deserialized dictionary
                 except json.JSONDecodeError:
                     # Handle error if JSON is not well-formed
-                    break  # Or handle error accordingly
+                    break  
         return None
 
     def close(self):

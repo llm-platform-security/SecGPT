@@ -41,37 +41,11 @@
                   "required": ["name", "email", "departure_city", "destination_city", "departure_date", "class_of_service", "special_requirements"]
               },
               "response": {
-                  "type": "object",
-                  "properties": {
-                      "Passenger Name": {
-                          "type": "string"
-                      },
-                      "Email Address": {
-                          "type": "string"
-                      },
-                      "Departure City": {
-                          "type": "string"
-                      },
-                      "Destination City": {
-                          "type": "string"
-                      },
-                      "Departure Date and Time": {
-                          "type": "string",
-                          "description": "The departure date and time, including the appointment time."
-                      },
-                      "Class of Service": {
-                          "type": "string"
-                      },
-                      "Special Requirements": {
-                          "type": "string"
-                      },
-                      "Booking Reference": {
-                          "type": "string",
-                          "description": "A unique booking reference code."
-                      }
-                  },
-                  "required": ["Passenger Name", "Email Address", "Departure City", "Destination City", "Departure Date and Time", "Class of Service", "Special Requirements", "Booking Reference"]
-              }
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "description": "A confirmation message for travel booking."
+            }
           },
           "required": ["request", "response"]
       }

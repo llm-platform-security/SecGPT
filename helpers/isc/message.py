@@ -46,7 +46,7 @@ class Message:
         message = dict()
         message['message_type'] = 'no_functionality_response'
         message['spoke_id'] = spoke_id
-        message['response'] = functionality_request+" not found"
+        message['response'] = functionality_request + " not found"
         serialized_msg = json.dumps(message).encode('utf-8')
         return serialized_msg
 
@@ -54,6 +54,6 @@ class Message:
         message = dict()
         message['message_type'] = 'functionality_denial_response'
         message['spoke_id'] = spoke_id
-        message['response'] = functionality_request+" refuses to respond"
+        message['response'] = functionality_request + " refuses to respond"
         serialized_msg = json.dumps(message).encode('utf-8')
         return serialized_msg

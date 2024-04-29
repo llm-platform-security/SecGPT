@@ -17,35 +17,10 @@
       "required": ["message_id"]
       },
       "response": {
-      "type": "object",
-      "properties": {
-        "id": {
         "type": "string",
-        "description": "The ID of the message retrieved."
-        },
-        "threadId": {
-        "type": "string",
-        "description": "The thread ID of the message."
-        },
-        "snippet": {
-        "type": "string",
-        "description": "A snippet preview of the message content."
-        },
-        "body": {
-        "type": "string",
-        "description": "The cleaned body of the message."
-        },
-        "subject": {
-        "type": "string",
-        "description": "The subject of the message."
-        },
-        "sender": {
-        "type": "string",
-        "description": "The sender of the message."
-        }
-      },
-      "required": ["id", "threadId", "snippet", "body", "subject", "sender"],
-      "description": "The detailed information of the message retrieved."
+        "minLength": 1,
+        "maxLength": 256,
+        "description": "The detailed information of the message retrieved."
       }
     },
     "required": ["request", "response"]

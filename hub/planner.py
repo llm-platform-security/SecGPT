@@ -1,39 +1,26 @@
+# Libraries for LLMs
+from langchain_openai import ChatOpenAI
+
 # Library for importing prompt templates
 from helpers.templates.prompt_templates import MyTemplates
 
-# Library for generating lists
-import ast
+# Library for plan parsing
+from langchain_core.output_parsers import JsonOutputParser
 
-# Libraries for LLMChain
-from langchain.chains import LLMChain
 
 class Planner:
-    def __init__(self, llm, tool_importer, memory_obj):
-        self.chat_llm = llm
-        self.tool_importer = tool_importer
-        self.memory_obj = memory_obj
-        self.memory = self.memory_obj.get_memory()
-        self.summary_memory = self.memory_obj.get_summary_memory()
+    def __init__(self, temperature=0.0):
+        self.chat_llm = ChatOpenAI(model='gpt-4', temperature=temperature, model_kwargs={"seed": 0})
 
         templates = MyTemplates()
-        self.template_plan = templates.template_plan     
+        self.template_plan = templates.template_planner
 
-        self.llm_chain = LLMChain(
-            llm=self.chat_llm,
-            prompt=self.template_plan,
-            verbose=False
-        )
+        self.parser = JsonOutputParser()
+        
+        self.llm_chain = self.template_plan | self.chat_llm | self.parser 
 
     # Generate a plan based on the user's query
-    def plan_generate(self, query):
-        summary_history = str(self.summary_memory.load_memory_variables({})['summary_history'])
-
-        plan = self.llm_chain.predict(input=query, tools=self.tool_importer.get_tools(query), chat_history=summary_history)
-        self.memory_obj.record_history(query, str({'output': plan}))
-
-        app_list = []
-        if plan:
-            if plan[0] == '[':
-                app_list = ast.literal_eval(plan)
-        return app_list
-    
+    def plan_generate(self, query, tool_info, chat_history):            
+        plan = self.llm_chain.invoke({"input": query, "tools": tool_info, "chat_history": chat_history})
+        return plan
+        

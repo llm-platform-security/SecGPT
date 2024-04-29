@@ -1,5 +1,5 @@
 from helpers.configs.configuration import Configs
-from helpers.utilities.setup_envoironment import setup_environment
+from helpers.utilities.setup_environment import setup_environment
 
 
 def main(user_id, debug=True, functionalities_path=None, test_queries=None):
@@ -69,5 +69,3 @@ if __name__ == '__main__':
         test_queries = ["I am experiencing fatigue and persistent pain."]
         functionalities_path = "./evaluation/ambiguity/uncontrolled_system_alteration.json"
         main('0', debug=True, functionalities_path=functionalities_path, test_queries=test_queries)
-        
-

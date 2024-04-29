@@ -18,6 +18,8 @@
         },
         "response": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
           "description": "Relevant documents"
         }
       },

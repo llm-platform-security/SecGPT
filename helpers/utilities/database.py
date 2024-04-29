@@ -20,3 +20,4 @@ if __name__ == '__main__':
     keys = r.keys('*')
     print(keys)
     r.flushall()
+    

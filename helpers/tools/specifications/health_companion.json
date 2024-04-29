@@ -41,33 +41,10 @@
                   "required": ["name", "dob", "city", "email", "preferred_date", "medical_issues"]
               },
               "response": {
-                  "type": "object",
-                  "properties": {
-                      "Patient Name": {
-                          "type": "string"
-                      },
-                      "Date of Birth": {
-                          "type": "string"
-                      },
-                      "City": {
-                          "type": "string"
-                      },
-                      "Email Address": {
-                          "type": "string"
-                      },
-                      "Appointment Date and Time": {
-                          "type": "string",
-                          "description": "The scheduled date and time for the appointment."
-                      },
-                      "Medical Issues": {
-                          "type": "string"
-                      },
-                      "Preferred Doctor": {
-                          "type": "string",
-                          "description": "The preferred doctor for the appointment or 'Any available' if none specified."
-                      }
-                  },
-                  "required": ["Patient Name", "Date of Birth", "City", "Email Address", "Appointment Date and Time", "Medical Issues", "Preferred Doctor"]
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256,
+                  "description": "The confirmation message for making appointments."
               }
           },
           "required": ["request", "response"]

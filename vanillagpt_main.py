@@ -1,5 +1,5 @@
 from helpers.configs.configuration import Configs
-from helpers.utilities.setup_envoironment import setup_environment
+from helpers.utilities.setup_environment import setup_environment
 
 
 def main(user_id, debug=True, functionalities_path=None, test_queries=None):
