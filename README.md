@@ -160,7 +160,7 @@ We welcome contributions to the project, e.g., through pull requests. For issues
 │   ├── isc
 │   │   ├── message.py
 │   │   └── socket.py
-│   ├── memories
+│   ├── memory
 │   │   └── memory.py
 │   ├── permission
 │   │   └── permission.py
@@ -186,14 +186,14 @@ We welcome contributions to the project, e.g., through pull requests. For issues
 │   │   └── tool_importer.py
 │   └── utilities
 │       ├── database.py
-│       └── setup_envoironment.py
+│       └── setup_environment.py
 ├── hub
 │   ├── hub.py
 │   ├── hub_operator.py
 │   └── planner.py
 ├── spoke
 │   ├── output_parser.py
-│   ├── shell_spoke.py
+│   ├── vanilla_spoke.py
 │   ├── spoke.py
 │   └── spoke_operator.py
 ├── vanillagpt
