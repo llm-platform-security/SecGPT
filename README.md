@@ -5,10 +5,14 @@ SecGPT is an LLM-based system that secures the execution of LLM apps via isolati
 
 <p align="center"><img src="figure/architecture.bmp" alt="workflow" width="400"></p>
 
-We develop SecGPT using [LangChain](https://github.com/langchain-ai/langchain), an open-source LLM framework. We use LangChain because it supports several LLMs and apps and can be easily extended to include additional LLMs and apps. We use [Redis](https://redis.io/) database to keep and manage memory. We implement SecGPT as a personal assistant chatbot, which the users can communicate with using text messages. 
+We develop SecGPT using [LlamaIndex](https://github.com/run-llama/llama_index) and [LangChain](https://github.com/langchain-ai/langchain) open-source LLM frameworks. We use these frameworks because they are easily extensible and support several LLMs and apps. We use [Redis](https://redis.io/) database to keep and manage memory. We implement SecGPT as a personal assistant chatbot, which the users can communicate with using natural language.
 
 <a href='https://arxiv.org/abs/2403.04960'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> 
 [![LICENSE](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+
+## Updates
+:mega: SecGPT is now available as a [llama pack](https://github.com/run-llama/llama_index/tree/main/llama-index-packs/llama-index-packs-secgpt) on LlamaHub :tada:
+
 
 ## Table of Contents
 - [SecGPT](#secgpt)
