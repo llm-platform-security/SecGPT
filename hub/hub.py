@@ -95,7 +95,7 @@ class Hub:
                         pass
             else:
                 output = response
-            print("SecGPT: " + output + "\n")
+            print("IsolateGPT: " + output + "\n")
         else:
-            print("SecGPT: \n")
+            print("IsolateGPT: \n")
             

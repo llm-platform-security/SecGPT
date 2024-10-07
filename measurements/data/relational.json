@@ -1,0 +1,148 @@
+{
+    "task_name": "Tool Usage - Relational Data",
+    "dataset_path": "/home/isolategpt/Desktop/SecGPT-IsolateGPT-AE/measurements/datasets/1d89f4b3-5f73-48cf-a127-2fdeb22f6d84.json",
+    "secgpt_results_dir": "/home/isolategpt/Desktop/SecGPT-IsolateGPT-AE/measurements/results/isolategpt/relational",
+    "plaingpt_results_dir": "/home/isolategpt/Desktop/SecGPT-IsolateGPT-AE/measurements/results/vanillagpt/relational",
+    "available_functionalities": {
+        "get_user_name": {
+            "description": "get_user_name(user_id: int) -> str - Get the name of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The user's name.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "list_user_ids": {
+            "description": "list_user_ids() -> List[str] - List all the user IDs.",
+            "args": "{}"
+        },
+        "find_users_by_name": {
+            "description": "find_users_by_name(name: str) -> List[langchain_benchmarks.tool_usage.tasks.relational_data.SearchHit] - Find users with the given name.\n\n        Args:\n            name: The name to search for.\n\n        Returns:\n            The list of matching users.",
+            "args": "{'name': {'title': 'Name', 'type': 'string'}}"
+        },
+        "find_locations_by_name": {
+            "description": "find_locations_by_name(city: str) -> List[langchain_benchmarks.tool_usage.tasks.relational_data.SearchHit] - Find locations with the given city name.",
+            "args": "{'city': {'title': 'City', 'type': 'string'}}"
+        },
+        "find_foods_by_name": {
+            "description": "find_foods_by_name(food: str) -> List[langchain_benchmarks.tool_usage.tasks.relational_data.SearchHit] - Find foods with the given name.",
+            "args": "{'food': {'title': 'Food', 'type': 'string'}}"
+        },
+        "get_user_email": {
+            "description": "get_user_email(user_id: int) -> str - Get the email of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The user's email.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "get_user_location": {
+            "description": "get_user_location(user_id: int) -> int - Get the location ID of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The user's location ID.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "get_user_favorite_color": {
+            "description": "get_user_favorite_color(user_id: int) -> str - Get the favorite color of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The user's favorite color.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "get_user_favorite_foods": {
+            "description": "get_user_favorite_foods(user_id: int) -> List[int] - Get the list of favorite foods of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The list of favorite foods.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "get_weather_at_location": {
+            "description": "get_weather_at_location(location_id: int) -> str - Get the current weather at the location with the given location ID.\n\n        Args:\n            location_id: The location's ID.\n\n        Returns:\n            The current weather at the location.",
+            "args": "{'location_id': {'title': 'Location Id', 'type': 'integer'}}"
+        },
+        "get_city_for_location": {
+            "description": "get_city_for_location(location_id: int) -> str - Get the city for the location with the given location ID.\n\n        Args:\n            location_id: The location's ID.\n\n        Returns:\n            The city name for the location.",
+            "args": "{'location_id': {'title': 'Location Id', 'type': 'integer'}}"
+        },
+        "get_current_time_for_location": {
+            "description": "get_current_time_for_location(location_id: int) -> str - Get the current time for the location with the given location ID.\n\n        Args:\n            location_id: The location's ID.\n\n        Returns:\n            The current time for the location.",
+            "args": "{'location_id': {'title': 'Location Id', 'type': 'integer'}}"
+        },
+        "get_current_weather_for_location": {
+            "description": "get_current_weather_for_location(location_id: int) -> str - Get the current weather for the location with the given location ID.\n\n        Args:\n            location_id: The location's ID.\n\n        Returns:\n            The current weather for the location.",
+            "args": "{'location_id': {'title': 'Location Id', 'type': 'integer'}}"
+        },
+        "get_food_name": {
+            "description": "get_food_name(food_id: int) -> str - Get the name of the food with the given food ID.\n\n        Args:\n            food_id: The food's ID.\n\n        Returns:\n            The name of the food.",
+            "args": "{'food_id': {'title': 'Food Id', 'type': 'integer'}}"
+        },
+        "get_food_calories": {
+            "description": "get_food_calories(food_id: int) -> int - Get the calories per serving for the food with the given food ID.\n\n        Args:\n            food_id: The food's ID.\n\n        Returns:\n            The calories per serving of the food.",
+            "args": "{'food_id': {'title': 'Food Id', 'type': 'integer'}}"
+        },
+        "get_food_allergic_ingredients": {
+            "description": "get_food_allergic_ingredients(food_id: int) -> List[str] - Get the list of allergic ingredients for the food with the given food ID.\n\n        Args:\n            food_id: The food's ID.\n\n        Returns:\n            The list of allergic ingredients.",
+            "args": "{'food_id': {'title': 'Food Id', 'type': 'integer'}}"
+        },
+        "get_current_user_id": {
+            "description": "get_current_user_id() -> int - Get the current user's ID.\n\n        Returns:\n            The current user's ID.",
+            "args": "{}"
+        }
+    },
+    "installed_functionalities": {
+        "get_user_name": {
+            "description": "get_user_name(user_id: int) -> str - Get the name of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The user's name.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "list_user_ids": {
+            "description": "list_user_ids() -> List[str] - List all the user IDs.",
+            "args": "{}"
+        },
+        "find_users_by_name": {
+            "description": "find_users_by_name(name: str) -> List[langchain_benchmarks.tool_usage.tasks.relational_data.SearchHit] - Find users with the given name.\n\n        Args:\n            name: The name to search for.\n\n        Returns:\n            The list of matching users.",
+            "args": "{'name': {'title': 'Name', 'type': 'string'}}"
+        },
+        "find_locations_by_name": {
+            "description": "find_locations_by_name(city: str) -> List[langchain_benchmarks.tool_usage.tasks.relational_data.SearchHit] - Find locations with the given city name.",
+            "args": "{'city': {'title': 'City', 'type': 'string'}}"
+        },
+        "find_foods_by_name": {
+            "description": "find_foods_by_name(food: str) -> List[langchain_benchmarks.tool_usage.tasks.relational_data.SearchHit] - Find foods with the given name.",
+            "args": "{'food': {'title': 'Food', 'type': 'string'}}"
+        },
+        "get_user_email": {
+            "description": "get_user_email(user_id: int) -> str - Get the email of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The user's email.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "get_user_location": {
+            "description": "get_user_location(user_id: int) -> int - Get the location ID of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The user's location ID.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "get_user_favorite_color": {
+            "description": "get_user_favorite_color(user_id: int) -> str - Get the favorite color of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The user's favorite color.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "get_user_favorite_foods": {
+            "description": "get_user_favorite_foods(user_id: int) -> List[int] - Get the list of favorite foods of the user with the given user ID.\n\n        Args:\n            user_id: The user's ID.\n\n        Returns:\n            The list of favorite foods.",
+            "args": "{'user_id': {'title': 'User Id', 'type': 'integer'}}"
+        },
+        "get_weather_at_location": {
+            "description": "get_weather_at_location(location_id: int) -> str - Get the current weather at the location with the given location ID.\n\n        Args:\n            location_id: The location's ID.\n\n        Returns:\n            The current weather at the location.",
+            "args": "{'location_id': {'title': 'Location Id', 'type': 'integer'}}"
+        },
+        "get_city_for_location": {
+            "description": "get_city_for_location(location_id: int) -> str - Get the city for the location with the given location ID.\n\n        Args:\n            location_id: The location's ID.\n\n        Returns:\n            The city name for the location.",
+            "args": "{'location_id': {'title': 'Location Id', 'type': 'integer'}}"
+        },
+        "get_current_time_for_location": {
+            "description": "get_current_time_for_location(location_id: int) -> str - Get the current time for the location with the given location ID.\n\n        Args:\n            location_id: The location's ID.\n\n        Returns:\n            The current time for the location.",
+            "args": "{'location_id': {'title': 'Location Id', 'type': 'integer'}}"
+        },
+        "get_current_weather_for_location": {
+            "description": "get_current_weather_for_location(location_id: int) -> str - Get the current weather for the location with the given location ID.\n\n        Args:\n            location_id: The location's ID.\n\n        Returns:\n            The current weather for the location.",
+            "args": "{'location_id': {'title': 'Location Id', 'type': 'integer'}}"
+        },
+        "get_food_name": {
+            "description": "get_food_name(food_id: int) -> str - Get the name of the food with the given food ID.\n\n        Args:\n            food_id: The food's ID.\n\n        Returns:\n            The name of the food.",
+            "args": "{'food_id': {'title': 'Food Id', 'type': 'integer'}}"
+        },
+        "get_food_calories": {
+            "description": "get_food_calories(food_id: int) -> int - Get the calories per serving for the food with the given food ID.\n\n        Args:\n            food_id: The food's ID.\n\n        Returns:\n            The calories per serving of the food.",
+            "args": "{'food_id': {'title': 'Food Id', 'type': 'integer'}}"
+        },
+        "get_food_allergic_ingredients": {
+            "description": "get_food_allergic_ingredients(food_id: int) -> List[str] - Get the list of allergic ingredients for the food with the given food ID.\n\n        Args:\n            food_id: The food's ID.\n\n        Returns:\n            The list of allergic ingredients.",
+            "args": "{'food_id': {'title': 'Food Id', 'type': 'integer'}}"
+        },
+        "get_current_user_id": {
+            "description": "get_current_user_id() -> int - Get the current user's ID.\n\n        Returns:\n            The current user's ID.",
+            "args": "{}"
+        }
+    },
+    "available_toolkits": {},
+    "installed_toolkits": {}
+}

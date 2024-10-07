@@ -8,3 +8,6 @@ pyseccomp==0.1.2
 redis==5.0.1
 tldextract==5.1.1
 faiss-cpu==1.7.4
+beautifulsoup4==4.12.3
+pandas==2.2.0
+langchain-benchmarks==0.0.10

@@ -1,3 +1,24 @@
 {
-    "0": {}
+    "0": {
+        "metro_hail": {
+            "exec": "permanent",
+            "collab": "permanent"
+        },
+        "quick_ride": {
+            "exec": "permanent",
+            "collab": "permanent"
+        },
+        "symptom_solver": {
+            "exec": "permanent"
+        },
+        "health_companion": {
+            "exec": "permanent"
+        },
+        "travel_mate": {
+            "exec": "permanent"
+        },
+        "search_gmail": {
+            "exec": "permanent"
+        }
+    }
 }

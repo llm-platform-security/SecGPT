@@ -1,0 +1,406 @@
+[
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "What is the city for location ID 1?"
+    },
+    "outputs": {
+      "reference": "New York",
+      "order_matters": true,
+      "expected_steps": [
+        "get_city_for_location"
+      ]
+    },
+    "id": "114cb5ab-3ffb-4ac0-b4f8-3b7cd7baf58f",
+    "created_at": "2023-11-18T00:30:11.557683+00:00",
+    "modified_at": "2023-11-18T00:30:11.557683+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "What is the name of food with id 6?"
+    },
+    "outputs": {
+      "reference": "Pasta",
+      "order_matters": true,
+      "expected_steps": [
+        "get_food_name"
+      ]
+    },
+    "id": "4a34036d-c503-4f7f-bb7e-8ae24b469772",
+    "created_at": "2023-11-18T00:30:11.548954+00:00",
+    "modified_at": "2023-11-18T00:30:11.548954+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "what is eve's user id?"
+    },
+    "outputs": {
+      "reference": "42",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name"
+      ]
+    },
+    "id": "fdc42fd4-61fd-4948-a6b0-ac0dbd9ce0b0",
+    "created_at": "2023-11-18T00:30:11.536070+00:00",
+    "modified_at": "2023-11-18T00:30:11.536070+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "get the current user id"
+    },
+    "outputs": {
+      "reference": "35",
+      "order_matters": true,
+      "expected_steps": [
+        "get_current_user_id"
+      ]
+    },
+    "id": "afdf6ca7-3ed0-4382-acc7-3afc812e5f92",
+    "created_at": "2023-11-18T00:30:11.517628+00:00",
+    "modified_at": "2023-11-18T00:30:11.517628+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "How many users by the name of bob?"
+    },
+    "outputs": {
+      "reference": "1",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name"
+      ]
+    },
+    "id": "8401b9d9-d2bb-4864-8497-baf74884f800",
+    "created_at": "2023-11-18T00:30:11.517099+00:00",
+    "modified_at": "2023-11-18T00:30:11.517099+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "what is alice's email address?"
+    },
+    "outputs": {
+      "reference": "alice@gmail.com",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_user_email"
+      ]
+    },
+    "id": "0a0971ed-543b-417e-b903-5d64b6fd954c",
+    "created_at": "2023-11-18T00:30:11.511926+00:00",
+    "modified_at": "2023-11-18T00:30:11.511926+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "find donna's favorite color"
+    },
+    "outputs": {
+      "reference": "green",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_user_favorite_color"
+      ]
+    },
+    "id": "2e698339-d155-4e4e-ab22-9af3be6f66fb",
+    "created_at": "2023-11-18T00:30:11.502182+00:00",
+    "modified_at": "2023-11-18T00:30:11.502182+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "weather in LA right now?"
+    },
+    "outputs": {
+      "reference": "Sunny, Temperature: 75\u00b0F",
+      "order_matters": true,
+      "expected_steps": [
+        "find_locations_by_name",
+        "get_current_weather_for_location"
+      ]
+    },
+    "id": "e82a0faf-00b9-40a5-a0e3-9723d923e58e",
+    "created_at": "2023-11-18T00:30:11.501477+00:00",
+    "modified_at": "2023-11-18T00:30:11.501477+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "time in chicago"
+    },
+    "outputs": {
+      "reference": "2023-11-14 11:15 AM",
+      "order_matters": true,
+      "expected_steps": [
+        "find_locations_by_name",
+        "get_current_time_for_location"
+      ]
+    },
+    "id": "3dae9147-d730-466d-bd61-d82d401d0bf7",
+    "created_at": "2023-11-18T00:30:11.468687+00:00",
+    "modified_at": "2023-11-18T00:30:11.468687+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "list the allergens in chocolate"
+    },
+    "outputs": {
+      "reference": "milk, soy",
+      "order_matters": true,
+      "expected_steps": [
+        "find_foods_by_name",
+        "get_food_allergic_ingredients"
+      ]
+    },
+    "id": "69ac9f1d-13d0-4924-87c0-7b24aaf1cacd",
+    "created_at": "2023-11-18T00:30:11.467543+00:00",
+    "modified_at": "2023-11-18T00:30:11.467543+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "If i eat a serving of pizza, how many calories will I consume?"
+    },
+    "outputs": {
+      "reference": "285 calories",
+      "order_matters": true,
+      "expected_steps": [
+        "find_foods_by_name",
+        "get_food_calories"
+      ]
+    },
+    "id": "577e0688-bc14-4a82-a8b7-070c23d81da1",
+    "created_at": "2023-11-18T00:30:11.409839+00:00",
+    "modified_at": "2023-11-18T00:30:11.409839+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "what is the current users favorite color?"
+    },
+    "outputs": {
+      "reference": "yellow",
+      "order_matters": true,
+      "expected_steps": [
+        "get_current_user_id",
+        "get_user_favorite_color"
+      ]
+    },
+    "id": "3fea8b37-0e92-450c-92a4-18c992dda543",
+    "created_at": "2023-11-18T00:30:11.330093+00:00",
+    "modified_at": "2023-11-18T00:30:11.330093+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "eve ate a serving of sushi, what allergens was she exposed to?"
+    },
+    "outputs": {
+      "reference": "fish, soy",
+      "order_matters": true,
+      "expected_steps": [
+        "find_foods_by_name",
+        "get_food_allergic_ingredients"
+      ]
+    },
+    "id": "6f461b12-88ac-4f35-a9d3-80bd13f1c964",
+    "created_at": "2023-11-18T00:30:11.328071+00:00",
+    "modified_at": "2023-11-18T00:30:11.328071+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "Frank who is Even's friend is allergic to dairy. Can he eat the salad?"
+    },
+    "outputs": {
+      "reference": "yes",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_food_allergic_ingredients"
+      ]
+    },
+    "id": "3f8cdac4-f320-4793-b167-dae092dc8ad3",
+    "created_at": "2023-11-18T00:30:11.326729+00:00",
+    "modified_at": "2023-11-18T00:30:11.326729+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "what is the current users favorite color and name?"
+    },
+    "outputs": {
+      "reference": "yellow and Charlie",
+      "order_matters": true,
+      "expected_steps": [
+        "get_current_user_id",
+        "get_user_favorite_color",
+        "get_user_name"
+      ]
+    },
+    "id": "ab9f3743-25d5-4db5-9b14-fcb300e87c53",
+    "created_at": "2023-11-18T00:30:11.323904+00:00",
+    "modified_at": "2023-11-18T00:30:11.323904+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "whats the name of the city where bob lives?"
+    },
+    "outputs": {
+      "reference": "Los Angeles",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_user_location",
+        "get_city_for_location"
+      ]
+    },
+    "id": "8cad8e90-4dfc-4893-8b61-7b6aa5bccb5b",
+    "created_at": "2023-11-18T00:30:11.321692+00:00",
+    "modified_at": "2023-11-18T00:30:11.321692+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "Donna is about to go outside. Does she need an umbrella?"
+    },
+    "outputs": {
+      "reference": "yes",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_user_location",
+        "get_current_weather_for_location"
+      ]
+    },
+    "id": "bb3878de-c910-4a2c-bb1f-17f16ec67258",
+    "created_at": "2023-11-18T00:30:11.319679+00:00",
+    "modified_at": "2023-11-18T00:30:11.319679+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "Is it likely that Donna is awake right now?"
+    },
+    "outputs": {
+      "reference": "yes",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_user_location",
+        "get_current_time_for_location"
+      ]
+    },
+    "id": "f8657d6a-1cd9-4f9e-84e1-0f4a0703e494",
+    "created_at": "2023-11-18T00:30:11.318042+00:00",
+    "modified_at": "2023-11-18T00:30:11.318042+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "do alice and charlie use the same email provider?"
+    },
+    "outputs": {
+      "reference": "no",
+      "order_matters": true,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_user_email",
+        "get_user_email"
+      ]
+    },
+    "id": "11be1430-fad8-4cb6-a7f3-3afc8dd4ea51",
+    "created_at": "2023-11-18T00:30:11.316430+00:00",
+    "modified_at": "2023-11-18T00:30:11.316430+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "Is it likely that Donna is outside with an umbrella at this time?"
+    },
+    "outputs": {
+      "reference": "yes",
+      "order_matters": false,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_user_location",
+        "get_current_time_for_location",
+        "get_current_weather_for_location"
+      ]
+    },
+    "id": "33002acd-a844-4a3f-8a4e-99fdf3af1cb6",
+    "created_at": "2023-11-18T00:30:11.314852+00:00",
+    "modified_at": "2023-11-18T00:30:11.314852+00:00",
+    "runs": [],
+    "source_run_id": null
+  },
+  {
+    "dataset_id": "df6be6c9-05b3-445e-8836-ebb4aba63826",
+    "inputs": {
+      "question": "do bob and alice live in the same city?"
+    },
+    "outputs": {
+      "reference": "no",
+      "order_matters": false,
+      "expected_steps": [
+        "find_users_by_name",
+        "get_user_location",
+        "get_city_for_location",
+        "get_user_location",
+        "get_city_for_location"
+      ]
+    },
+    "id": "3cbf32ad-560a-490a-b562-eb497bad1e92",
+    "created_at": "2023-11-18T00:30:11.311909+00:00",
+    "modified_at": "2023-11-18T00:30:11.311909+00:00",
+    "runs": [],
+    "source_run_id": null
+  }
+]

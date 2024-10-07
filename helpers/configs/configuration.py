@@ -9,7 +9,7 @@ class Configs:
     debug_mode = Mode.DEBUG 
     user_id = "0"
     # Set the root path of the project with absolute path
-    root_path = ""
+    root_path = "/home/isolategpt/Desktop/SecGPT-IsolateGPT-AE"
     env_variables_path = os.path.join(root_path, "data/env_variables.json")
     db_url = "redis://127.0.0.1:6379/0" #localhost
     db_port = 6379
