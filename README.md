@@ -23,26 +23,24 @@ IsolateGPT is an LLM-based system that secures the execution of LLM apps via iso
 ### Conda environment
 To set up the environment, we suggest using Conda to install all necessary packages. Conda installation instructions can be found [here](https://docs.anaconda.com/free/miniconda/miniconda-install/). The following setup assumes Conda is installed and is running on a Linux/macOS system (though Windows should work too).
 
-First, create the conda environment: 
-
-```sh
-conda create -n isolategpt python=3.9
-```
-
-and activate the conda environment:
-
-```sh
-conda activate isolategpt
-```
-
-### Python dependencies
-Now, clone the IsolateGPT repository and use pip to install the required packages:
+To get started, clone the IsolateGPT repository and navigate to its directory.
 
 ```sh
 git clone https://github.com/llm-platform-security/SecGPT
-cd IsolateGPT
+cd SecGPT
 git checkout IsolateGPT-AE
-pip install -r requirements.txt
+```
+
+Then, create and set up the conda environment with the provided `environment.yml` file: 
+
+```sh
+conda env create -f environment.yml
+```
+
+And activate the conda environment:
+
+```sh
+conda activate isolategpt
 ```
 
 ### Database
