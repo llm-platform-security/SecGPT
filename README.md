@@ -27,6 +27,8 @@ We develop SecGPT using [LlamaIndex](https://github.com/run-llama/llama_index) a
 
 
 ## Installation
+
+### Conda environment
 To set up the environment, we suggest using Conda to install all necessary packages. Conda installation instructions can be found [here](https://docs.anaconda.com/free/miniconda/miniconda-install/). The following setup assumes Conda is installed and is running on a Linux/macOS system (though Windows should work too).
 
 First, create the conda environment: 
@@ -47,6 +49,13 @@ Next, clone the SecGPT repository and use pip to install the required packages:
 git clone https://github.com/llm-platform-security/SecGPT
 cd SecGPT
 pip install -r requirements.txt
+```
+
+### Database
+To enable long-term memory in IsolateGPT, install the Redis database (using Ubuntu as an example):
+
+```sh
+sudo apt install redis-server
 ```
 
 ## Setup
@@ -135,11 +144,11 @@ We welcome contributions to the project, e.g., through pull requests. For issues
 
 ## Citation
 ```plaintext
-@article{wu2024secgpt,
-  title={{SecGPT: An Execution Isolation Architecture for LLM-Based Systems}}, 
+@inproceedings{wu2025isolategpt,
+  title={{IsolateGPT: An Execution Isolation Architecture for LLM-Based Systems}}, 
   author={Wu, Yuhao and Roesner, Franziska and Kohno, Tadayoshi and Zhang, Ning and Iqbal, Umar},
-  journal={arXiv preprint arXiv:2403.04960},
-  year={2024},
+  booktitle={Network and Distributed System Security Symposium (NDSS)},
+  year={2025},
 }
 ```
 
