@@ -2,6 +2,8 @@
 
 IsolateGPT is an LLM-based system that secures the execution of LLM apps via isolation. The key idea behind IsolateGPT is to isolate the execution of apps and to allow interaction between apps and the system only through well-defined interfaces with user permission. IsolateGPT can defend against multiple types of attacks, including app compromise, data stealing, inadvertent data exposure, and uncontrolled system alteration. The architecture of IsolateGPT is shown in the figure below. 
 
+**Note:** IsolateGPT has been accepted for publication at the NDSS Symposium 2025. For more details about IsolateGPT, please refer to the paper titled "IsolateGPT: An Execution Isolation Architecture for LLM-Based Systems."
+
 
 <p align="center"><img src="figure/architecture.jpg" alt="workflow" width="400"></p>
 
@@ -172,3 +174,13 @@ If you encounter any problems for running the artifact, please contact our resea
 [Ning Zhang](https://cybersecurity.seas.wustl.edu/) (Washington University in St. Louis)  
 [Umar Iqbal](https://umariqbal.com) (Washington University in St. Louis)  
 
+
+## Citation
+```plaintext
+@inproceedings{wu2025isolategpt,
+  title={{IsolateGPT: An Execution Isolation Architecture for LLM-Based Systems}}, 
+  author={Wu, Yuhao and Roesner, Franziska and Kohno, Tadayoshi and Zhang, Ning and Iqbal, Umar},
+  booktitle={Network and Distributed System Security Symposium (NDSS)},
+  year={2025},
+}
+```
