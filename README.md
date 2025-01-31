@@ -149,7 +149,7 @@ We welcome contributions to the project, e.g., through pull requests. For issues
 @inproceedings{wu2025isolategpt,
   title={{IsolateGPT: An Execution Isolation Architecture for LLM-Based Agentic Systems}}, 
   author={Wu, Yuhao and Roesner, Franziska and Kohno, Tadayoshi and Zhang, Ning and Iqbal, Umar},
-  booktitle={Network and Distributed System Security (NDSS) Symposium },
+  booktitle={Network and Distributed System Security (NDSS) Symposium},
   year={2025},
 }
 ```
