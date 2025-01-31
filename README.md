@@ -1,6 +1,6 @@
-# SecGPT
+# SecGPT (aka IsolateGPT)
 
-SecGPT is an LLM-based system that secures the execution of LLM apps via isolation. The key idea behind SecGPT is to isolate the execution of apps and to allow interaction between apps and the system only through well-defined interfaces with user permission. SecGPT can defend against multiple types of attacks, including app compromise, data stealing, inadvertent data exposure, and uncontrolled system alteration. The architecture of SecGPT is shown in the figure below. Learn more about SecGPT in our [paper](https://arxiv.org/abs/2403.04960).
+SecGPT, aka IsolateGPT, is an LLM-based system that secures the execution of LLM apps via isolation. The key idea behind SecGPT is to isolate the execution of apps and to allow interaction between apps and the system only through well-defined interfaces with user permission. SecGPT can defend against multiple types of attacks, including app compromise, data stealing, inadvertent data exposure, and uncontrolled system alteration. The architecture of SecGPT is shown in the figure below. Learn more about SecGPT in our [paper](https://arxiv.org/abs/2403.04960).
 
 
 <p align="center"><img src="figure/architecture.bmp" alt="workflow" width="400"></p>
@@ -11,11 +11,13 @@ We develop SecGPT using [LlamaIndex](https://github.com/run-llama/llama_index) a
 [![LICENSE](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 ## Updates
+:mega: Our paper has been accepted at [NDSS 2025](https://www.ndss-symposium.org/ndss2025/accepted-papers/) :tada:
+
 :mega: SecGPT is now available as a [llama pack](https://github.com/run-llama/llama_index/tree/main/llama-index-packs/llama-index-packs-secgpt) on LlamaHub :tada:
 
 
 ## Table of Contents
-- [SecGPT](#secgpt)
+- [SecGPT (aka IsolateGPT)](#secgpt-(aka-isolategpt))
   - [Installation](#installation)
   - [Setup](#setup)
   - [Running](#Running)
@@ -145,9 +147,9 @@ We welcome contributions to the project, e.g., through pull requests. For issues
 ## Citation
 ```plaintext
 @inproceedings{wu2025isolategpt,
-  title={{IsolateGPT: An Execution Isolation Architecture for LLM-Based Systems}}, 
+  title={{IsolateGPT: An Execution Isolation Architecture for LLM-Based Agentic Systems}}, 
   author={Wu, Yuhao and Roesner, Franziska and Kohno, Tadayoshi and Zhang, Ning and Iqbal, Umar},
-  booktitle={Network and Distributed System Security Symposium (NDSS)},
+  booktitle={Network and Distributed System Security (NDSS) Symposium },
   year={2025},
 }
 ```
